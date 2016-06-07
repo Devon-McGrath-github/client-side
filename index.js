@@ -7,7 +7,9 @@ p.innerHTML = '<button id="button">WHERE IS I WHO IS I??</button>'
 
 
 
-document.getElementById("button").addEventListener("click", function () {})
+document.getElementById("button").addEventListener("click", function () {
+  console.log('HIIIII');
+})
 
 
 // function displayInfo() {
