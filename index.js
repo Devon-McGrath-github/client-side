@@ -6,10 +6,12 @@ xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function (err, data) {
     console.log(err)
   }
 
-  console.log(data[0]) // in case you're curious
+  console.log(data)
+  console.log(data('latitude'))
+    // in case you're curious
 
   document.body.innerHTML = example({
     name: 'Bevon',
-    latitude: data.body.latitude
+    latitude: data
   })
 })
