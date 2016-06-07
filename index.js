@@ -1,12 +1,12 @@
 var xhr = require('xhr')
 var example = require('./views/example.hbs')
 
-document.getElementById("butt").addEventListener("click", displayInfo)
+// document.getElementById("butt").addEventListener("click", displayInfo)
 
 
-function displayInfo() {
+// function displayInfo() {
 
-  xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function (err, data) {
+xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function (err, data) {
     if (err) {
       console.log(err)
     }
@@ -18,4 +18,4 @@ function displayInfo() {
       latitude: objectData.latitude
     })
   })
-}
+  // }
