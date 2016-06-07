@@ -70,9 +70,9 @@ module.exports=require("./dist/cjs/handlebars.runtime")["default"];
 module.exports=require("handlebars/runtime")["default"];
 },{"handlebars/runtime":22}],24:[function(require,module,exports){
 function isFunction(o){var t=toString.call(o);return"[object Function]"===t||"function"==typeof o&&"[object RegExp]"!==t||"undefined"!=typeof window&&(o===window.setTimeout||o===window.alert||o===window.confirm||o===window.prompt)}module.exports=isFunction;var toString=Object.prototype.toString;
-
 },{}],25:[function(require,module,exports){
 var trim=require("trim"),forEach=require("for-each"),isArray=function(r){return"[object Array]"===Object.prototype.toString.call(r)};module.exports=function(r){if(!r)return{};var e={};return forEach(trim(r).split("\n"),function(r){var t=r.indexOf(":"),i=trim(r.slice(0,t)).toLowerCase(),o=trim(r.slice(t+1));"undefined"==typeof e[i]?e[i]=o:isArray(e[i])?e[i].push(o):e[i]=[e[i],o]}),e};
+
 },{"for-each":2,"trim":26}],26:[function(require,module,exports){
 function trim(r){return r.replace(/^\s*|\s*$/g,"")}exports=module.exports=trim,exports.left=function(r){return r.replace(/^\s*/,"")},exports.right=function(r){return r.replace(/\s*$/,"")};
 
@@ -84,5 +84,5 @@ function once(n){var o=!1;return function(){return o?void 0:(o=!0,n.apply(this,a
 function extend(){for(var r={},e=0;e<arguments.length;e++){var t=arguments[e];for(var n in t)hasOwnProperty.call(t,n)&&(r[n]=t[n])}return r}module.exports=extend;var hasOwnProperty=Object.prototype.hasOwnProperty;
 
 },{}],30:[function(require,module,exports){
-var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(e,a,l,n,t){var i,u=null!=a?a:{},r=l.helperMissing,o="function",s=e.escapeExpression;return'<button id="button">WHERE IS I WHO IS I??</button>\n<h1>This is where yo is '+s((i=null!=(i=l.latitude||(null!=a?a.latitude:a))?i:r,typeof i===o?i.call(u,{name:"latitude",hash:{},data:t}):i))+"!</h1>\n<h1>Hello "+s((i=null!=(i=l.name||(null!=a?a.name:a))?i:r,typeof i===o?i.call(u,{name:"name",hash:{},data:t}):i))+"!</h1>\n"},useData:!0});
+var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(e,a,l,n,t){var i,r=null!=a?a:{},s=l.helperMissing,u="function",h=e.escapeExpression;return"\n<h1>This is where yo is "+h((i=null!=(i=l.latitude||(null!=a?a.latitude:a))?i:s,typeof i===u?i.call(r,{name:"latitude",hash:{},data:t}):i))+"!</h1>\n<h1>Hello "+h((i=null!=(i=l.name||(null!=a?a.name:a))?i:s,typeof i===u?i.call(r,{name:"name",hash:{},data:t}):i))+"!</h1>\n"},useData:!0});
 },{"hbsfy/runtime":23}]},{},[1]);
