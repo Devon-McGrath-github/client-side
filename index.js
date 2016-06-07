@@ -1,7 +1,9 @@
 var xhr = require('xhr')
 var example = require('./views/example.hbs')
 
-document.getElementById("butt").addEventListener("click", console.log('it worked'))
+document.getElementById("butt").addEventListener("click", function () {
+  console.log('it worked')
+})
 
 
 // function displayInfo() {
