@@ -9,7 +9,7 @@ xhr.get('https://api.wheretheiss.at/v1/satellites/25544', function (err, data) {
   console.log(data) // in case you're curious
 
   document.body.innerHTML = example({
-    name: 'Bevon',
+    name: data.name,
     latitude: data.latitude
   })
 })
