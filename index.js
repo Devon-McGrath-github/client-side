@@ -1,6 +1,11 @@
 var xhr = require('xhr')
 var example = require('./views/example.hbs')
 
+var p = document.createElement("button");
+p.innerHTML = '<button id="button">WHERE IS I WHO IS I??</button>'
+
+
+
 
 document.getElementById("button").addEventListener("click", function () {})
 
